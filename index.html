@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивное меню - Интернет-магазин</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <header>
+        <div class="container">
+            <nav>
+                <!-- Логотип слева -->
+                <a href="#" class="logo">
+                    <i class="fas fa-store"></i>
+                    STORE
+                </a>
+                
+                <!-- Основное меню по центру -->
+                <ul class="main-menu">
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Новинки</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                
+                <!-- Социальные сети справа -->
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="ВКонтакте">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                
+                <!-- Кнопка бургер-меню -->
+                <button class="menu-toggle" aria-label="Открыть меню">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+   <p class="fronttext">ALT.ESCAPE</p>
+
+
+    <script>
+        // Скрипт для работы бургер-меню
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.main-menu').classList.toggle('active');
+        });
+        
+        // Закрытие меню при клике на ссылку (на мобильных устройствах)
+        document.querySelectorAll('.main-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    document.querySelector('.main-menu').classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+    <div class="contain" style="margin-top: 20VH; background-color: black; padding: 10vh; background: linear-gradient(135deg, #f5f7ff 0%, #000000 100%);
+">        
+        <div class="cards-container">
+            <!-- Карточка 1 -->
+            <div class="card">
+                <div class="card-image" style="background-color: #ffffff;">
+                    <img src="one.jpg" alt="" width="200px">
+                    <div class="card-price">12 990 ₽</div>
+                    <div class="card-badge">НОВИНКА</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">ALT.HOODIE</h3>
+                    <p class="card-description">ONE SIZE, OVERSIZE</p>
+
+                    <button class="card-button">В корзину</button>
+                </div>
+            </div>
+            
+            <!-- Карточка 2 -->
+            <div class="card">
+                <div class="card-image" style="background-color: #ffffff;">
+                    <img src="two.jpg" alt="" width="200px">
+                    <div class="card-price">8 490 ₽</div>
+                    <div class="card-badge">ХИТ</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">ALT.SWEETSHOT</h3>
+                    <p class="card-description">PREMIUM FACTORY, OVERSIZE</p>
+                    <button class="card-button">В корзину</button>
+                </div>
+            </div>
+            
+            <!-- Карточка 3 -->
+            <div class="card">
+                <div class="card-image" style="background-color: #ffffff;">
+                    <img src="three.jpg" alt="" width="150px">
+                    <div class="card-price">4 990 ₽</div>
+                    <div class="card-badge">АКЦИЯ</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">ALT.BAG</h3>
+                    <p class="card-description">YOUR BEST BAG</p>
+                    <button class="card-button">В корзину</button>
+                </div>
+            </div>
+            
+            <!-- Карточка 4 -->
+            <div class="card">
+                <div class="card-image" style="background-color: #ffffff;">
+                    <img src="four.jpg" alt="" width="200px">
+                    <div class="card-price">21 790 ₽</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">ALT.SHOES</h3>
+                    <p class="card-description">PLATFORM UNIQUE BOOTS</p>
+                    <button class="card-button">В корзину</button>
+                </div>
+            </div>
+            
+            <!-- Карточка 5 -->
+            <div class="card">
+                <div class="card-image" style="background-color: #d4d4d4;">
+                    <img src="five.jpg" alt="" width="150px">
+                    <div class="card-price">13 990 ₽</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">ALT.COSTUME</h3>
+                    <p class="card-description">ALT LOOK</p>
+                    <button class="card-button">В корзину</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <button class="nav-button" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="nav-button" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+       <p class="secondtext">ALT.LOOKBOOK</p>
+
+       <section class="hero">
+        <div class="container">
+            <h1>Осень-Зима 2025</h1>
+            <p>Откройте для себя новые образы и вдохновение в нашей осенней коллекции</p>
+            <a href="#" class="btn">Смотреть коллекцию</a>
+        </div>
+    </section>
+    
+    <!-- Грид сетка -->
+    <div class="container">
+        <div class="lookbook-grid">
+            <!-- Элемент 1 -->
+            <div class="grid-item item-1">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Стильный образ с пальто">
+                <div class="item-info">
+                    <div class="item-title">ALT.COAT</div>
+                    <div class="item-price">12 990 ₽</div>
+                </div>
+            </div>
+            
+            <!-- Элемент 2 -->
+            <div class="grid-item item-2">
+                <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Свитер крупным планом">
+                <div class="item-info">
+                    <div class="item-title">ALT.SWEATSHOT</div>
+                    <div class="item-price">5 490 ₽</div>
+                </div>
+            </div>
+            
+            <!-- Элемент 3 -->
+            <div class="grid-item item-3">
+                <img src="https://images.unsplash.com/photo-1544441893-675973e31985?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Женская обувь">
+                <div class="item-info">
+                    <div class="item-title">ALT.BOOTS</div>
+                    <div class="item-price">18 790 ₽</div>
+                </div>
+            </div>
+            
+            <!-- Элемент 4 -->
+            <div class="grid-item item-4">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Мужской образ">
+                <div class="item-info">
+                    <div class="item-title">ALT.COSTUME</div>
+                    <div class="item-price">24 990 ₽</div>
+                </div>
+            </div>
+            
+            <!-- Элемент 5 -->
+            <div class="grid-item item-5">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Женское платье">
+                <div class="item-info">
+                    <div class="item-title">ALT.DRESS</div>
+                    <div class="item-price">9 990 ₽</div>
+                </div>
+            </div>
+            
+            <!-- Элемент 6 -->
+            <div class="grid-item item-6">
+                <img src="https://images.unsplash.com/photo-1505022610480-60be5dc66c1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Аксессуары">
+                <div class="item-info">
+                    <div class="item-title">ALT.BAG</div>
+                    <div class="item-price">6 490 ₽</div>
+                </div>
+            </div>
+            
+            <!-- Элемент 7 -->
+            <div class="grid-item item-7">
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Мужские часы">
+                <div class="item-info">
+                    <div class="item-title">ALT.ACCESSORIES</div>
+                    <div class="item-price">15 990 ₽</div>
+                </div>
+            </div>
+            
+            <!-- Элемент 8 -->
+            <div class="grid-item item-8">
+                <img src="https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Женский жакет">
+                <div class="item-info">
+                    <div class="item-title">ALT.JACKET</div>
+                    <div class="item-price">7 890 ₽</div>
+                </div>
+            </div>
+            
+            <!-- Элемент 9 -->
+            <div class="grid-item item-9">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Полный образ">
+                <div class="item-info">
+                    <div class="item-title">ALT.SET: ALT.DRESS + ALT.ACCESSORIES</div>
+                    <div class="item-price">28 490 ₽</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Магазин</h3>
+                    <ul>
+                        <li><a href="#">Новая коллекция</a></li>
+                        <li><a href="#">Женская одежда</a></li>
+                        <li><a href="#">Мужская одежда</a></li>
+                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="#">Распродажа</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Помощь</h3>
+                    <ul>
+                        <li><a href="#">Доставка и возврат</a></li>
+                        <li><a href="#">Размеры</a></li>
+                        <li><a href="#">Уход за одеждой</a></li>
+                        <li><a href="#">Частые вопросы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>О нас</h3>
+                    <ul>
+                        <li><a href="#">Наша история</a></li>
+                        <li><a href="#">Устойчивое развитие</a></li>
+                        <li><a href="#">Карьера</a></li>
+                        <li><a href="#">Прессе</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Подписка</h3>
+                    <p>Будьте в курсе новых поступлений и специальных предложений</p>
+                    <form style="margin-top: 15px;">
+                        <input type="email" placeholder="Ваш email" style="padding: 10px; width: 100%; border: none; border-radius: 4px; margin-bottom: 10px;">
+                        <button type="submit" class="btn" style="width: 100%;">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 FASHIONSTORE. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            let currentIndex = 2; // Центральная карточка
+            
+            // Функция для обновления позиций карточек
+            function updateCards() {
+                cards.forEach((card, index) => {
+                    // Вычисляем относительную позицию карточки
+                    let position = index - currentIndex;
+                    
+                    // Обеспечиваем циклическое поведение
+                    if (position < -2) position += 5;
+                    if (position > 2) position -= 5;
+                    
+                    // Применяем стили в зависимости от позиции
+                    switch(position) {
+                        case -2:
+                            card.style.transform = 'translate(-50%, -50%) rotate(-15deg) translateX(-180px) scale(0.85)';
+                            card.style.zIndex = '1';
+                            card.style.opacity = '0.8';
+                            break;
+                        case -1:
+                            card.style.transform = 'translate(-50%, -50%) rotate(-7deg) translateX(-90px) scale(0.9)';
+                            card.style.zIndex = '2';
+                            card.style.opacity = '0.85';
+                            break;
+                        case 0:
+                            card.style.transform = 'translate(-50%, -50%) rotate(0deg) scale(1)';
+                            card.style.zIndex = '5';
+                            card.style.opacity = '1';
+                            break;
+                        case 1:
+                            card.style.transform = 'translate(-50%, -50%) rotate(7deg) translateX(90px) scale(0.9)';
+                            card.style.zIndex = '2';
+                            card.style.opacity = '0.85';
+                            break;
+                        case 2:
+                            card.style.transform = 'translate(-50%, -50%) rotate(15deg) translateX(180px) scale(0.85)';
+                            card.style.zIndex = '1';
+                            card.style.opacity = '0.8';
+                            break;
+                    }
+                });
+            }
+            
+            // Обработчики для кнопок навигации
+            prevBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex - 1 + 5) % 5;
+                updateCards();
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % 5;
+                updateCards();
+            });
+            
+            // Обработчики для клика по карточкам
+            cards.forEach((card, index) => {
+                card.addEventListener('click', function() {
+                    currentIndex = index;
+                    updateCards();
+                });
+            });
+            
+            // Инициализация позиций
+            updateCards();
+        });
+    </script>
+
+
+
+</body>
+</html>
